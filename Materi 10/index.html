@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Function Practice</title>
+</head>
+<body>
+    <h1>JavaScript Function</h1>
+
+    <h2>1. Define Practice: printHeart</h2>
+    <button onclick="printHeart()">Print Heart</button>
+
+    <h2>2. Return Value Practice: multiply</h2>
+    <p>Result of multiply(2, 3): <span id="multiply1"></span></p>
+    <p>Result of multiply(9, 9): <span id="multiply2"></span></p>
+    <p>Result of multiply(5, 4): <span id="multiply3"></span></p>
+
+    <h2>3. Scope Practice</h2>
+    <button onclick="observe()">Observe Animal</button>
+    <button onclick="handleAnimal()">Handle Deadly Animal</button>
+    <p>Global deadly animal: <span id="deadlyAnimalGlobal"></span></p>
+
+    <h2>4. Arrow Function Exercise: sayHello</h2>
+    <p>sayHello("Hagrid"): <span id="sayHello1"></span></p>
+    <p>sayHello("Luna"): <span id="sayHello2"></span></p>
+
+    <script>
+        // 1. Define Practice
+        function printHeart() {
+            console.log("<3");
+        }
+
+        // 2. Return Value Practice
+        function multiply(a, b) {
+            return a * b;
+        }
+        // Displaying multiply results
+        document.getElementById("multiply1").textContent = multiply(2, 3);
+        document.getElementById("multiply2").textContent = multiply(9, 9);
+        document.getElementById("multiply3").textContent = multiply(5, 4);
+
+        // 3. Scope Practice
+        let animal = "Giant Pacific Octopus";
+        function observe() {
+            let animal = "Pajama Squid";
+            console.log(animal); // Pajama Squid
+        }
+        let deadlyAnimal = "Blue-Ringed Octopus";
+        function handleAnimal() {
+            let deadlyAnimal = "Scorpionfish";
+            console.log(deadlyAnimal); // Scorpionfish
+        }
+        // Displaying global deadlyAnimal
+        document.getElementById("deadlyAnimalGlobal").textContent = deadlyAnimal;
+
+        // 4. Arrow Function Exercise
+        const sayHello = (name) => `Hello ${name}!`;
+        document.getElementById("sayHello1").textContent = sayHello("Hagrid");
+        document.getElementById("sayHello2").textContent = sayHello("Luna");
+    </script>
+</body>
+</html>
